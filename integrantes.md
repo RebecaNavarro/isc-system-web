@@ -1,5 +1,6 @@
 - Paul Landaeta
 - Alexia Marin
 - Miguel Quenta
+- Adrian Sanchez
 
 - Rebeca Navarro
