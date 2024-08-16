@@ -1,1 +1,2 @@
 - Paul Landaeta
+- Rebeca Navarro
