@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Run cypress') {
             steps {
-                sh 'npx cypress run --headless'
+                sh 'npx cypress run'
             }
         }
     }
