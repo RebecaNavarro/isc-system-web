@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    tools {
+        nodejs '20'
+    }
+    stages {
+        stage('Clone Project') {
+            steps {
+                git branch : 'qa' , url: 'https://github.com/RebecaNavarro/isc-system-web'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install --force'
+            }
+        }
+        // stage('Build') {
+        //     steps {
+        //         sh 'npm run build'
+        //     }
+        // }
+         stage('Install cypress') {
+            steps {
+                sh 'npm install cypress --save-dev --force'
+            }
+        }
+        stage('Run cypress') {
+            steps {
+                sh 'npx cypress run'
+            }
+        }
+    }
+}
